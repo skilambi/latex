@@ -50,3 +50,55 @@
     showstringspaces=false,
     breaklines=true
 }
+
+% SystemVerilog Style
+\lstdefinestyle{svstyle}{
+    language=Verilog,
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen}\itshape,
+    keywordstyle=\color{blue}\bfseries,
+    keywordstyle=[2]\color{codepurple}\bfseries,
+    stringstyle=\color{BrickRed},
+    basicstyle=\ttfamily\small,
+    numbers=left,
+    numbersep=10pt,
+    numberstyle=\tiny\color{black},
+    breaklines=true,
+    showstringspaces=false,
+    morekeywords={
+        logic, bit, byte, shortint, int, longint, chandle, string,
+        typedef, enum, struct, union, packed, tagged,
+        interface, endinterface, modport, clocking, endclocking,
+        program, endprogram, package, endpackage, import,
+        class, endclass, extends, implements, virtual, pure, extern,
+        new, null, this, super, local, protected, rand, randc,
+        constraint, solve, before, dist, inside,
+        covergroup, endgroup, coverpoint, cross, bins, illegal_bins,
+        sequence, endsequence, property, endproperty,
+        assert, assume, cover, expect, throughout, within,
+        always_ff, always_comb, always_latch, unique, priority,
+        iff, matches, tagged, void, ref, const, static, automatic
+    },
+    morekeywords=[2]{
+        posedge, negedge
+    },
+    literate={|=>}{{{\color{codepurple}\bfseries|=>}}}3
+             {|->}{{{\color{codepurple}\bfseries|->}}}3
+             {\#\#}{{{\color{codepurple}\bfseries\#\#}}}2
+}
+
+% Python Style
+\lstdefinestyle{pythonstyle}{
+    language=Python,
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen}\itshape,
+    keywordstyle=\color{blue}\bfseries,
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\small,
+    numbers=left,
+    numbersep=10pt,
+    numberstyle=\tiny\color{black},
+    breaklines=true,
+    showstringspaces=false,
+    morekeywords={self, True, False, None, as, with, yield, lambda}
+}
